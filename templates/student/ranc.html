@@ -72,7 +72,7 @@
     <h1 style="color: Red;text-align: center;">Announcement</h1>
     <ul>
         {% for announcement in announcement%}
-            <p><b>Teacher Name</b>: {{ announcement.name }} <br><b>Date</b>: {{ announcement.date }}<br><b> Field</b>: {{ announcement.field }}<br> <b>Dept</b>: {{ announcement.department }}<br> <b>Announcement</b>: {{ announcement.announcement }} <p>___________________________________</p>
+            <p><b>Teacher-Name</b>: {{ announcement.name }} <br><b>Date</b>: {{ announcement.date }}<br><b> Field</b>: {{ announcement.field }}<br> <b>Dept</b>: {{ announcement.department }}<br> <b>Announcement</b>: {{ announcement.announcement }} <p>___________________________________</p>
             <form method="post" action="{% url 'rancp' %}">
                 {% csrf_token %}
                 <input type="hidden" name="delete_announcement_id" value="{{ announcement.id }}">
