@@ -1,0 +1,36 @@
+{% extends 'exam/adminbase.html' %}
+
+{% block content %}
+{% load widget_tweaks %}
+{% load static %}
+
+<!DOCTYPE html>
+<!-- display_data.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Display Data</title>
+</head>
+<body>
+    <h1 style="color: red; text-align: center;">Complains</h1>
+    <ul>
+        {% for bug in bug_data %}
+            <li style="text-align: center;">
+                <b>Name</b>: {{ bug.name }}<br>
+                <b>Email</b>: {{ bug.email }}<br>
+                <b>Phone:</b> {{ bug.phone }}<br>
+                <b>Web</b>: {{ bug.web }}<br>
+                <b>Issue</b>: {{ bug.message }}<br>
+                <p>______________________________</p>
+                <!-- Add a form to delete this bug -->
+                <form method="post" action="{% url 'admbug' %}">
+                    {% csrf_token %}
+                    <input type="hidden" name="delete_bug_id" value="{{ bug.id }}">
+                    <input type="submit" value="Delete">
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+{% endblock %}
+</html>

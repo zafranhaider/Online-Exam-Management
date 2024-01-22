@@ -1,0 +1,103 @@
+{% extends 'teacher/teacherbase.html' %}
+{% load widget_tweaks %}
+{% block content %}
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <style type="text/css">
+        a:link {
+            text-decoration: none;
+        }
+
+        .order-card {
+            color: rgb(255, 255, 255);
+        }
+
+        .bg-c-blue {
+            background: #104f66;
+        }
+
+        .bg-c-green {
+            background: #4C51BF;
+        }
+
+        .bg-c-yellow {
+            background: #53616e;
+        }
+
+        .bg-c-pink {
+            background: #663a30;
+        }
+
+        .card {
+            -webkit-box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+            box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+            margin-bottom: 30px;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card .card-block {
+            padding: 25px;
+        }
+
+        .order-card i {
+            font-size: 26px;
+        }
+
+        .f-left {
+            float: left;
+        }
+
+        .f-right {
+            float: right;
+        }
+
+        header {
+            left: 0px;
+            right: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: Red;text-align: center;">Announce</h1>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="post" action="{% url 'anc' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                      <label for="date">Date:</label>
+                      <input type="date" class="form-control" id="date" name="date" placeholder="Enter Date" required>
+                  </div>
+                    <div class="form-group">
+                        <label for="field">Field:</label>
+                        <input type="text" class="form-control" id="field" name="field" placeholder="Enter Field">
+                    </div>
+                    <div class="form-group">
+                      <label for="department">Dept:</label>
+                      <input type="text" class="form-control" id="department" name="department" placeholder="Enter your Department" required>
+                  </div>
+                    <div class="form-group">
+                        <label for="announcement">Announcement:</label>
+                        <textarea class="form-control" id="announcement" name="announcement" rows="4" placeholder="Type your message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+{% endblock content %}
