@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Teacher
 user teacher
 pas Pop1234
@@ -8,3 +9,15 @@ pas Pop123
 
 Admin  zafi
 bookmyshow123
+=======
+Teacher
+user teacher
+pas Pop1234
+
+student
+user zafran
+pas Pop123
+
+Admin  zafi
+bookmyshow123
+>>>>>>> ccc0ad3bee0a04dfa93d522347dd10b28e09a08a
