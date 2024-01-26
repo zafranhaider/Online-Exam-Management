@@ -1,0 +1,10 @@
+Teacher
+user teacher
+pas Pop1234
+
+student
+user zafran
+pas Pop123
+
+Admin  zafi
+bookmyshow123
