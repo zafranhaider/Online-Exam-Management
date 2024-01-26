@@ -88,6 +88,12 @@ def subann(request):
 def lock(request):
     return render(request,'teacher\lock.html')
 
+#LOCK Exam Process should be written here
+@login_required(login_url='teacherlogin')
+@user_passes_test(is_teacher)
+def lockpage(request):
+    pass
+
 #for announce
 @login_required(login_url='teacherlogin')
 @user_passes_test(is_teacher)
