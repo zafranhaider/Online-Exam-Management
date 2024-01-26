@@ -1,11 +1,12 @@
-{% extends 'teacher/teacherbase.html' %}
+{% extends 'student/studentbase.html' %}
 {% load widget_tweaks %}
 {% block content %}
 
 
+
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -69,7 +70,7 @@
     </style>
   </head>
   <body>
-    <h1 style="color: Red;text-align: center;">Announcement</h1>
+    <h1 style="color: Red;text-align: center;"><b>Announcement</h1>
     <ul>
         {% for announcement in announcement%}
             <p><b>Teacher-Name</b>: {{ announcement.name }} <br><b>Date</b>: {{ announcement.date }}<br><b> Field</b>: {{ announcement.field }}<br> <b>Dept</b>: {{ announcement.department }}<br> <b>Announcement</b>: {{ announcement.announcement }} <p>___________________________________</p>
