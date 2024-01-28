@@ -10,6 +10,7 @@ from exam import models as QMODEL
 from teacher import models as TMODEL
 from .models import Application
 from teacher.models import Announcement
+from onlinexam import urls
 
 #for showing signup/login button for student
 def studentclick_view(request):
@@ -34,7 +35,7 @@ def student_signup_view(request):
             student.save()
             my_student_group = Group.objects.get_or_create(name='STUDENT')
             my_student_group[0].user_set.add(user)
-        return HttpResponseRedirect('studentlogin')
+        
     return render(request,'student/studentsignup.html',context=mydict)
 
 def is_student(user):
