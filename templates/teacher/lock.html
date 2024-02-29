@@ -71,10 +71,8 @@
   <body>
     <h1 style="color: Red;text-align: center;">Announce or Lock(Close or Open) Exam</h1>
     <ul>
-     <p>Here You Can Announce and Lock The Exam Means You can Intract With<br>
-        Studenst Using Announce(Approve STudents For there Applications or Announce Exam Date)<br> 
-        You can Lock The Exam To Stop Students from Attending The Exam<br>
-        <h3 style="color: orange; text-align:center;">We Recomend You to First Announce the Exam Date for Students <br> and Then lock the Exam</h3>
+     <p>Here You Can Announce The Exam Means You can Intract With<br>
+        Studenst Using Announce(Approve STudents For there Applications or Announce Exam Date)<br>
         </p>
     </ul>
     <div class="d-flex justify-content-center">
@@ -83,8 +81,7 @@
         <form method="post" action="{% url 'anc' %}">
           {% csrf_token %}
           <div>
-        <button type="submit" class="btn btn-danger mr-2">Close Exam</button>
-        <button type="submit" class="btn btn-success mr-2">Open Exam</button>
+      
       </form></div></div>
       </div>
 </body>
